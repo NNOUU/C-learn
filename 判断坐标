@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+
+int main()
+
+{
+float a,b,c,d;
+
+printf("请输入坐标: ");
+scanf("%f,%f",&a,&b);
+
+c=sqrt(a*a+b*b);
+
+if(c>1 && c<2)
+
+printf("在");
+
+else 
+
+printf("不在");
+return 0;
+}
+
+ 
+
