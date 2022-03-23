@@ -1,0 +1,17 @@
+#include<stdio.h>
+int main()
+{
+printf("输出能被3,5,7整除的数:\n");
+for(int num =100; num<=999; num++)
+  {
+    if(num%3==0 && num%5==0 && num%7==0)
+    {
+      printf("%d\t",num);
+     }
+    else
+    {
+      printf("");
+    }
+  }
+}
+
