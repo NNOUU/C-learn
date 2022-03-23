@@ -1,0 +1,15 @@
+#include<stdio.h>
+int main()
+{
+	int m,n,i,min;
+	scanf("%d%d",&m,&n);
+	min=m;
+	
+	if(min>n) min=n;
+	for(i=1;i<=min;i++)
+	{
+		if(m%i==0 && n%i==0)
+			printf("%d ",i);
+	}
+	return 0;
+}
