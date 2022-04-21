@@ -1,0 +1,37 @@
+/*用二分法在一个有序数列{1,2,3,4,5,6,7,8,9,10}中查找key值，若找到key则输出其在数组中对应的下标，否则输出not found。
+输入格式:
+直接输入一个要查找的正整数key。没有其它任何附加字符。
+输出格式:
+找到则在一行中按照“weizhi:下标”的格式输出其在数组中对应的下标，否则输出not found。
+输入样例:
+4
+输出样例:
+weizhi:3
+输入样例:
+15
+输出样例:
+not found
+*/
+
+#include <stdio.h>
+main()
+{
+ int b[]={1,2,3,4,5,6,7,8,9,10};//数组
+ int left=0,right=9,a,key;
+ scanf("%d",&key);//查找关键字
+ while(left<right)//while循环
+ {
+  	a=(left+right)/2;//a首先等于中间值
+  	if(b[a]==key)//假如a的顺序的值等于key
+     {
+      printf("weizhi:%d",a);//就直接给出位置
+      break;//然后跳出循环
+     }
+    else if(key>b[a])//如果不是，且key大于a的值
+      left=a+1;//最小值是a+1，然后继续跑
+    else
+      right=a-1;//如果key小于a的值，最大值是a—1
+ }
+ if(key>10||key<1)//假如key在范围外
+ printf("not found"); //直接输出找不到
+}
