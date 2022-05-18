@@ -1,0 +1,17 @@
+#include <stdio.h>
+double f(int n)
+/*定义函数f(n)计算n+(n+1)+……+(2n-1)，函数返回值类型是double。*/
+{
+	int i;
+	double sum=0;
+	for(i=1;i<=n;i++)
+		sum=sum+n;// 累加，sum等于0+n，然后再一遍循环，sum等于上一次的0+n再+(n+1)，以此类推
+		n++;
+	return sum;// 加到i=n时，就相当于2n-1
+}
+int main()
+{
+	int i,n;
+	scanf("%d",&n);
+	printf("%lf",f(n));
+}
